@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'file_upload/file_upload.dart';
+import 'html_view/html_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,6 +55,17 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.push(context,
                   CupertinoPageRoute(builder: (router) => FileUploadPage()));
+            },
+          ),
+          GestureDetector(
+            child: Card(
+              child: ListTile(
+                title: Text("Hmtl View"),
+              ),
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  CupertinoPageRoute(builder: (router) => HtmlViewPage()));
             },
           ),
         ],
